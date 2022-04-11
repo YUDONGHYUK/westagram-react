@@ -24,8 +24,8 @@ a {
   position: absolute;
   flex-direction: column;
   align-items: center;
-  top: calc((100vh - 760px)/2);
-  left: calc((100vw - 700px)/2);
+  top: calc((100vh - 760px) / 2);
+  left: calc((100vw - 700px) / 2);
   width: 700px;
   height: 760px;
   background-color: #fafafa;
@@ -80,9 +80,13 @@ a {
   font-size: 26px;
   font-weight: bold;
   color: white;
-  background-color: #c4e1fb;
+  background-color: #0095f6;
   border: none;
   border-radius: 8px;
+}
+
+.login-button.disable {
+  background-color: #c4e1fb;
 }
 
 .find {
