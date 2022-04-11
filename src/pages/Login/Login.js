@@ -10,10 +10,12 @@ const Login = () => {
 
   const handleIdInput = (e) => {
     setId(e.target.value);
+    checkIdAndPwd();
   };
 
   const handlePwdInput = (e) => {
     setPwd(e.target.value);
+    checkIdAndPwd();
   };
 
   const checkIdAndPwd = () => {
@@ -24,8 +26,7 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    checkIdAndPwd();
+    validation ? setSubmitted(true) : setSubmitted(false);
   };
 
   return validation && submitted ? (
@@ -46,7 +47,7 @@ const Login = () => {
           type="password"
           placeholder="비밀번호"
         />
-        <button className={`login-button ${id && pwd ? "" : "disable"}`}>
+        <button className={`login-button ${validation ? "" : "disable"}`}>
           로그인
         </button>
       </form>
