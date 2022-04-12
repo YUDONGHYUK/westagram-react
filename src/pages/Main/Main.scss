@@ -9,34 +9,6 @@
   height: 614px;
 }
 
-.article-comment__form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 6px 18px;
-}
-
-.comment__input {
-  width: 520px;
-  font-size: 16px;
-  background-color: transparent;
-  padding: 6px 0;
-  border: none;
-  outline: none;
-}
-
-.comment__button {
-  font-size: 18px;
-  font-weight: bold;
-  color: #c4e1fb;
-  transition: color 200ms ease-in;
-}
-
-.comment__button:hover {
-  color: #0095f7;
-}
-
 .main-right {
   position: fixed;
   left: calc(614px + 35px + (100vw - 975px) / 2);

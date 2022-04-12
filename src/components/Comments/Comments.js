@@ -2,10 +2,16 @@ import React from "react";
 import Comment from "../Comment/Comment";
 import "./Comments.scss";
 
-const Comments = (props) => {
+const Comments = ({ comments }) => {
   return (
     <ul className="comments">
-      <Comment />
+      {comments.map((comment) => (
+        <Comment
+          key={comment.id}
+          nickname={comment.name}
+          comment={comment.text}
+        />
+      ))}
     </ul>
   );
 };
