@@ -1,25 +1,18 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Login.css";
 import { Navigate } from "react-router-dom";
 
 const Login = () => {
-  const [id, setId] = useState("");
-  const [pwd, setPwd] = useState("");
+  const idRef = useRef();
+  const pwdRef = useRef();
   const [validation, setValidation] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleIdInput = (e) => {
-    setId(e.target.value);
-    checkIdAndPwd();
-  };
+  const hanldeInput = () => {
+    const idValue = idRef.current.value;
+    const pwdValue = pwdRef.current.value;
 
-  const handlePwdInput = (e) => {
-    setPwd(e.target.value);
-    checkIdAndPwd();
-  };
-
-  const checkIdAndPwd = () => {
-    id.includes("@") && pwd.length >= 5
+    idValue.includes("@") && pwdValue.length >= 5
       ? setValidation(true)
       : setValidation(false);
   };
@@ -36,13 +29,15 @@ const Login = () => {
       <header className="login-title">Westagram</header>
       <form onSubmit={onSubmit} action="./main.html" className="login-form">
         <input
-          onKeyUp={handleIdInput}
+          ref={idRef}
+          onChange={hanldeInput}
           className="login-id"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
         <input
-          onKeyUp={handlePwdInput}
+          ref={pwdRef}
+          onChange={hanldeInput}
           className="login-password"
           type="password"
           placeholder="비밀번호"
