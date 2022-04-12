@@ -1,12 +1,13 @@
 import React, { useRef, useState } from "react";
 import "./Login.css";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const idRef = useRef();
-  const pwdRef = useRef();
   const [validation, setValidation] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const idRef = useRef();
+  const pwdRef = useRef();
+  const navigate = useNavigate();
 
   const hanldeInput = () => {
     const idValue = idRef.current.value;
@@ -23,7 +24,8 @@ const Login = () => {
   };
 
   return validation && submitted ? (
-    <Navigate to="/main" replace={true} />
+    // <Navigate to="/main" replace={true} />
+    navigate("/main")
   ) : (
     <div className="container">
       <header className="login-title">Westagram</header>
