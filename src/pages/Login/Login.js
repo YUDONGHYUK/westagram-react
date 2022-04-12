@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./Login.css";
+import "./Login.scss";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -24,10 +24,9 @@ const Login = () => {
   };
 
   return validation && submitted ? (
-    // <Navigate to="/main" replace={true} />
     navigate("/main")
   ) : (
-    <div className="container">
+    <div className="login">
       <header className="login-title">Westagram</header>
       <form onSubmit={onSubmit} action="./main.html" className="login-form">
         <input
@@ -48,7 +47,7 @@ const Login = () => {
           로그인
         </button>
       </form>
-      <a className="find" href="#">
+      <a className="login-find" href="#">
         비밀번호를 잊으셨나요?
       </a>
     </div>

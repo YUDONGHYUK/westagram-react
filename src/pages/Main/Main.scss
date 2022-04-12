@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-input {
-  border: 2px solid #eaeaea;
-  background-color: #fafafa;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .nav-bar__container {
   position: fixed;
   top: 0;
@@ -87,7 +68,7 @@ button {
   margin-left: 12px;
 }
 
-.main {
+.main-container {
   position: relative;
   display: flex;
   width: 975px;
@@ -359,7 +340,7 @@ button {
   .nav-bar__container {
     width: 614px;
   }
-  .main {
+  .main-container {
     width: 614px;
   }
   .main-right {
