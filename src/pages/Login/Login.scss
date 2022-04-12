@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .login {
   display: flex;
   position: absolute;
@@ -18,21 +12,21 @@
   background-color: #fafafa;
   border: 3px solid #e6e6e6;
 
-  &-title {
+  .login-title {
     font-family: "Lobster", cursive;
     font-size: 90px;
     margin-top: 42px;
     margin-bottom: 70px;
   }
 
-  &-form {
+  .login-form {
     display: flex;
     flex-direction: column;
     width: 80%;
   }
 
-  &-id,
-  &-password {
+  .login-id,
+  .login-password {
     width: 100%;
     height: 78px;
     padding: 16px;
@@ -43,20 +37,23 @@
     border-radius: 3px;
   }
 
-  &-id::placeholder,
-  &-password::placeholder {
-    color: #00000060;
-  }
-
-  &-id {
+  .login-id {
     margin-bottom: 16px;
+
+    &::placeholder {
+      color: #00000060;
+    }
   }
 
-  &-password {
+  .login-password {
     margin-bottom: 30px;
+
+    &::placeholder {
+      color: #00000060;
+    }
   }
 
-  &-button {
+  .login-button {
     width: 100%;
     height: 60px;
     font-size: 26px;
@@ -65,13 +62,13 @@
     background-color: #0095f6;
     border: none;
     border-radius: 8px;
+
+    &.disable {
+      background-color: #c4e1fb;
+    }
   }
 
-  &-button.disable {
-    background-color: #c4e1fb;
-  }
-
-  &-find {
+  .login-find {
     font-size: 22px;
     font-weight: bold;
     color: #003569;
