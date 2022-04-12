@@ -1,71 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-.vertical-bar {
-  width: 1px;
-  height: 24px;
-  border-left: 1px solid black;
-  margin-right: 12px;
-}
-
-.nav-bar__title {
-  font-size: 24px;
-  font-family: "Lobster", cursive;
-}
-
-.search-bar {
-  padding: 3px 5px;
-}
-
-.search-bar::placeholder {
-  text-align: center;
-  color: #00000080;
-}
-
-.nav-bar__right img {
-  width: 24px;
-  height: 24px;
-  margin-left: 12px;
-}
-
-.main-container {
-  position: relative;
-  display: flex;
-  width: 975px;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.main-feeds {
-  display: flex;
-  flex-direction: column;
-  width: 614px;
-  border: 2px solid lightgrey;
-}
-
-.feed-profile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 48px;
-  margin: 4px 12px;
-}
-
-.profile-left {
-  display: flex;
-  justify-content: center;
-}
-
-.profile-picture {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  margin-right: 12px;
-}
-
-.profile-id {
-  font-weight: bold;
-}
-
 .main-article {
   width: 100%;
 }
@@ -73,29 +7,6 @@
 .article-img {
   width: 610px;
   height: 614px;
-}
-
-.feed-icon-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 54px;
-  padding: 6px 16px;
-}
-
-.feed-icon-bar__left button {
-  font-size: 22px;
-  transition: transform 200ms ease-in;
-}
-
-.feed-icon-bar__left button:hover {
-  transform: scale(1.1);
-  opacity: 0.7;
-}
-
-.feed-icon-bar__left button:nth-child(3) i {
-  font-size: 20px;
 }
 
 .feed-icon-bar__bookmark {
